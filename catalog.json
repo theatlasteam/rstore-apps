@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "generated_at": 1793266199,
+  "apps": [
+    {
+      "name": "10000h",
+      "description": "Strengthen your skills with 10000 hours rule.",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/10000h/icon.png",
+      "git_repo": "https://github.com/canicjusz/10000h",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/10000h/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/10000h/manifest.webapp"
+      },
+      "type": "privileged",
+      "license": "WTFPL",
+      "author": [
+        "Jan Michalak <janmichalak@int.pl>"
+      ],
+      "maintainer": [
+        "Jan Michalak <janmichalak@int.pl>"
+      ],
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "self-development; self-impovement",
+        "categories": [
+          "utility"
+        ]
+      },
+      "slug": "10000h",
+      "screenshots": [],
+      "sha256": "89185b43520e5498bd9ca55d2d6991848cf79d60614e479e2a5170b6eb321559",
+      "packageBytes": 435787,
+      "version": "1.0.0",
+      "permissions": [],
+      "runtimeTested": false
+    },
+    {
+      "name": "Users Tetris",
+      "description": "A simple one-screen tetris player",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/userstetris/icon.png",
+      "screenshots": [
+        "https://banana-hackers.gitlab.io/store-db/icons/userstetris/screenshot0.png"
+      ],
+      "git_repo": "https://github.com/user18130814200115-2/User-s-Tetris",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/userstetris/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/userstetris/manifest.webapp"
+      },
+      "type": "packaged",
+      "license": "MIT",
+      "author": [
+        "User18130814200115"
+      ],
+      "maintainer": [
+        "User18130814200115"
+      ],
+      "donation": "https://github.com/user18130814200115-2/User-s-Weather/blob/master/Donations.md",
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "tetris; games;",
+        "categories": [
+          "games"
+        ]
+      },
+      "slug": "userstetris",
+      "sha256": "121c58f3b73d049e763ae866177ca1458ee24c580267735923a4d64ac01a3c32",
+      "packageBytes": 10395,
+      "version": "1",
+      "permissions": [
+        "softkey"
+      ],
+      "runtimeTested": false
+    }
+  ]
+}

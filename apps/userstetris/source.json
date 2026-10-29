@@ -1,0 +1,11 @@
+{
+  "upstream": "https://github.com/user18130814200115-2/User-s-Tetris",
+  "upstreamPackage": "https://github.com/user18130814200115-2/User-s-Tetris/releases/download/v1.0/tetris.zip",
+  "upstreamLicense": "https://raw.githubusercontent.com/user18130814200115-2/User-s-Tetris/main/LICENSE",
+  "license": "MIT",
+  "sha256": "121c58f3b73d049e763ae866177ca1458ee24c580267735923a4d64ac01a3c32",
+  "bytes": 10395,
+  "mirroredAt": "2026-10-29T09:29:59.313792+00:00",
+  "compatibility": "KaiOS 2.x package; runtime functionality not guaranteed",
+  "modified": false
+}

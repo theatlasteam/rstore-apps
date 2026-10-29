@@ -1,0 +1,11 @@
+{
+  "upstream": "https://github.com/canicjusz/10000h",
+  "upstreamPackage": "https://github.com/canicjusz/10000h/raw/master/10000h.zip",
+  "upstreamLicense": "https://raw.githubusercontent.com/canicjusz/10000h/master/LICENSE",
+  "license": "WTFPL",
+  "sha256": "89185b43520e5498bd9ca55d2d6991848cf79d60614e479e2a5170b6eb321559",
+  "bytes": 435787,
+  "mirroredAt": "2026-10-29T09:29:57.284444+00:00",
+  "compatibility": "KaiOS 2.x package; runtime functionality not guaranteed",
+  "modified": false
+}
