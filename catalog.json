@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": 1793271557,
+  "generated_at": 1793284577,
   "apps": [
     {
       "name": "10000h",
@@ -350,6 +350,61 @@
         },
         "en": {
           "description": "Native-style KaiOS weather without an API key. Current conditions, 24 hours and 7 days; opt-in location, saved cities and offline cache. Google icon credits included."
+        }
+      }
+    },
+    {
+      "slug": "refresh-connect",
+      "name": "Refresh Connect",
+      "description": "QR profile import and a native VLESS / REALITY / TCP client. Requires the updated Refresh installer and root. Installs Xray as a dependency; no autostart. Currently a local SOCKS client, not a system-wide VPN.",
+      "locales": {
+        "ru": {
+          "name": "Refresh Connect",
+          "description": "Отдельное приложение с QR-импортом VLESS / REALITY / TCP. Требуются root и обновлённый установщик Refresh. Xray ставится как зависимость. Пока локальный SOCKS-клиент: не общесистемный VPN, без автозапуска."
+        }
+      },
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-connect/icon.png",
+      "git_repo": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-connect",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-connect/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-connect/manifest.webapp"
+      },
+      "type": "privileged",
+      "license": "MIT",
+      "author": [
+        "Atlas Messenger"
+      ],
+      "maintainer": [
+        "Atlas Messenger"
+      ],
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "refresh;network;vless;reality",
+        "categories": [
+          "utility"
+        ]
+      },
+      "screenshots": [],
+      "sha256": "7f505de3a35fd64e26fc11991a2e5764ddd6712958a984c0cb438bc07cf651f7",
+      "packageBytes": 1133965,
+      "version": "0.1.1",
+      "permissions": [
+        "systemXHR",
+        "storage"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": true,
+      "refresh": {
+        "dependencies": [
+          {
+            "id": "xray",
+            "version": "26.10.29"
+          }
+        ],
+        "scripts": {
+          "install": "refresh-hooks/install.sh",
+          "uninstall": "refresh-hooks/uninstall.sh"
         }
       }
     }
