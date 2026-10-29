@@ -6,3 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/validate.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tests/github-direct.test.cjs

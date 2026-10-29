@@ -71,8 +71,8 @@
   "app-uninstalled": "App uninstalled",
   "uninstall": "Uninstall",
   "about": "About RStore",
-  "about-body": "RStore 0.1.3\nAn independent KaiOS Refresh app store by Atlas Messenger. Not affiliated with KaiOS Technologies.",
-  "about-hosting": "Catalog and packages: GitHub / theatlasteam/rstore-apps.\nDownloads: Cloudflare.\nCommunity apps retain their authorship and licenses. Package verification does not guarantee safety or compatibility.",
+  "about-body": "RStore 0.1.4\nAn independent KaiOS Refresh app store by Atlas Messenger. Not affiliated with KaiOS Technologies.",
+  "about-hosting": "Catalog, details and ZIPs: directly from GitHub / theatlasteam/rstore-apps. Downloads do not use Cloudflare Workers.\nCommunity apps retain their authorship and licenses. SHA-256 verification does not guarantee safety or compatibility.",
   "refresh-catalog": "Refresh catalog",
   "app-name": "App name",
   "find": "Find",
@@ -83,5 +83,6 @@
   "installation-method": "Installation method",
   "open-source": "Source project",
   "browser-unavailable": "Could not open the browser to download the ZIP.",
-  "zip-download-note": "The ZIP will open in the browser. This does not install the app."
+  "zip-download-note": "The ZIP will open in the browser. This does not install the app.",
+  "download-stalled": "Download stalled: no data for 20 seconds. Check your connection and try again."
 }

@@ -71,8 +71,8 @@
   "app-uninstalled": "Приложение удалено",
   "uninstall": "Удалить",
   "about": "О RStore",
-  "about-body": "RStore 0.1.3\nНезависимый магазин приложений KaiOS Refresh от Atlas Messenger. Не связан с KaiOS Technologies.",
-  "about-hosting": "Каталог и пакеты: GitHub / theatlasteam/rstore-apps.\nСервер загрузок: Cloudflare.\nКоммьюнити-приложения сохраняют авторство и лицензии. Проверка пакета не гарантирует безопасность или совместимость.",
+  "about-body": "RStore 0.1.4\nНезависимый магазин приложений KaiOS Refresh от Atlas Messenger. Не связан с KaiOS Technologies.",
+  "about-hosting": "Каталог, карточки и ZIP: напрямую из GitHub / theatlasteam/rstore-apps. Cloudflare Workers для загрузки не используется.\nКоммьюнити-приложения сохраняют авторство и лицензии. Проверка SHA-256 не гарантирует безопасность или совместимость.",
   "refresh-catalog": "Обновить каталог",
   "app-name": "Название приложения",
   "find": "Найти",
@@ -83,5 +83,6 @@
   "installation-method": "Способ установки",
   "open-source": "Исходный проект",
   "browser-unavailable": "Не удалось открыть браузер для скачивания ZIP.",
-  "zip-download-note": "ZIP откроется в браузере. Это не устанавливает приложение."
+  "zip-download-note": "ZIP откроется в браузере. Это не устанавливает приложение.",
+  "download-stalled": "Загрузка остановилась: 20 секунд без данных. Проверьте интернет и повторите попытку."
 }

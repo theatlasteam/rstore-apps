@@ -47,3 +47,9 @@ RStore 0.1.2 includes Russian and English UI translations in `client/locales/`. 
 ## Expanded catalog
 
 Added Wallace Toolbox (Unlicense; manual ZIP/WebIDE installation only), KaiAuth (MIT), Contact Search (MIT), and Users Weather (MIT). Packages are mirrored with original code, permissions, license text, source URLs, SHA-256 and Russian/English descriptions. None is claimed to be runtime-tested on the Nokia 6300. Wallace requests certified permissions and can modify or erase system data; downloading its ZIP is not installation.
+
+### Direct GitHub client (0.1.4)
+
+The client now reads the catalog, per-app manifests, and ZIP packages directly from this GitHub repository on raw.githubusercontent.com. Cloudflare Workers is not used by the client. The legacy read-only Worker remains available for older clients. The client retains SHA-256 and exact-size verification before passing a package to the unchanged local installer. Remote requests stop after 20 seconds without progress; incomplete packages are never installed. Wallace Toolbox remains ZIP/manual-installation only.
+
+Run `node tests/github-direct.test.cjs` for transport, timeout, permission-policy, CSP and integrity regression tests. This does not assert that community apps run correctly on a phone.
