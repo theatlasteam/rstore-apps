@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "acorn": "^8.19.0",
+    "jsdom": "^22.1.0"
+  }
+}

@@ -10,3 +10,7 @@ jobs:
         with:
           node-version: 22
       - run: node tests/github-direct.test.cjs
+      - run: npm ci --prefix projects/refresh-weather/tests/tools --no-audit --no-fund
+      - run: node projects/refresh-weather/tests/weather.test.cjs
+      - run: npm install --prefix service --ignore-scripts --no-audit --no-fund
+      - run: node tests/weather-proxy.test.mjs

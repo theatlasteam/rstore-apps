@@ -1,0 +1,8 @@
+{
+  "upstream": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-weather",
+  "upstreamLicense": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/projects/refresh-weather/app/LICENSE",
+  "sha256": "bb397499f5776a639147c1be2a99e3c586a93dfe7c5028c343abb6148982e34d",
+  "packageBytes": 42375,
+  "licenseNotes": "MIT covers Atlas Messenger code/UI/original launcher only. Google weather assets are excluded and retain Google rights; upstream has no open redistribution licence. See included notices.",
+  "tests": "Public-city API and DOM regression checks; GPS hardware/permission prompt not yet confirmed."
+}

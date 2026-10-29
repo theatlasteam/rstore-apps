@@ -66,6 +66,22 @@ async function packageFor(app){
   normalized.sha256=Array.from(new Uint8Array(digest),x=>x.toString(16).padStart(2,'0')).join('');if(!app.sha256 || normalized.sha256 !== app.sha256)throw new Error('Package checksum does not match the RStore repository');return normalized;
 }
 function json(data,status=200){return new Response(JSON.stringify(data),{status,headers:{...cors,'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'}});}
+// Weather uses a tiny JSON-only fallback, not the RStore package transport.
+export async function weatherForecast(u) {
+ const latRaw=u.searchParams.get('latitude'),lonRaw=u.searchParams.get('longitude');
+ const lat=Number(latRaw),lon=Number(lonRaw);
+ if(!latRaw||!lonRaw||!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180)return json({error:'Invalid coordinates'},400);
+ const latitude=Math.round(lat*100)/100,longitude=Math.round(lon*100)/100;
+ const key=new Request('https://rstore-cache.invalid/weather/v1?latitude='+latitude+'&longitude='+longitude);
+ const cache=globalThis.caches?.default;const cached=await cache?.match(key);if(cached)return cached;
+ const upstream='https://api.open-meteo.com/v1/forecast?latitude='+latitude+'&longitude='+longitude+'&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,weather_code,wind_speed_10m&hourly=temperature_2m,precipitation_probability,weather_code,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,precipitation_probability_max&timezone=auto&wind_speed_unit=ms&forecast_days=7&forecast_hours=24';
+ const response=await fetch(upstream,{signal:AbortSignal.timeout(12000),headers:{'User-Agent':'RefreshWeather/1.0 (+https://github.com/theatlasteam/rstore-apps)'}});
+ const bytes=await readLimited(response,12000);const data=JSON.parse(strFromU8(bytes));
+ if(!data.current||!data.hourly||!data.daily||!Array.isArray(data.daily.time)||data.daily.time.length!==7)throw new Error('Incomplete weather response');
+ const out=new Response(bytes,{headers:{...cors,'Content-Type':'application/json; charset=utf-8','Cache-Control':'public, max-age=600','X-Weather-Source':'Open-Meteo'}});
+ if(cache)await cache.put(key,out.clone());return out;
+}
+
 export default {
  async fetch(req){
   const u=new URL(req.url);
@@ -73,6 +89,7 @@ export default {
   if(req.method!=='GET')return json({error:'Read-only API'},405);
   try{
    if(u.pathname==='/')return json({name:'RStore',repository:'https://github.com/theatlasteam/rstore-apps',catalog:'/api/catalog',health:'/health',package:'/api/package/{app-id}',platform:'KaiOS 2.5'});
+   if(u.pathname==='/weather/forecast')return await weatherForecast(u);
    if(u.pathname==='/health')return json({name:'RStore',version:'0.1.0',installer:'local-root-companion',platform:'KaiOS 2.5'});
    if(u.pathname==='/api/catalog'){
     const apps=await catalog();return json({source:CATALOG,platform:'KaiOS 2.5',compatibility:'Package availability and runtime compatibility vary. Not audited.',apps:apps.map(a=>({id:a.slug,name:a.name,description:a.description,locales:a.locales||{},icon:a.icon,author:a.author,source:a.git_repo||a.website||a.download.url,category:a.meta?.categories?.[0]||'utility',type:a.type,installSupported:a.installSupported!==false,manualOnly:a.manualOnly===true,installationNotes:a.installationNotes||{},requiresRoot:typeof a.requiresRoot==='boolean'?a.requiresRoot:null,license:a.license||null,version:a.version,packageBytes:a.packageBytes,sha256:a.sha256,runtimeTested:a.runtimeTested===true,hasAds:a.has_ads===true,hasTracking:a.has_tracking===true}))});

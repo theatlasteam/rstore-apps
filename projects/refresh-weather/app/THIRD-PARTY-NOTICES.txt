@@ -1,0 +1,6 @@
+Forecast: Open-Meteo https://open-meteo.com/ — data CC BY 4.0; free API for non-commercial use.
+City search: GeoNames via Open-Meteo.
+Weather icons: Google; https://github.com/mrdarrengriffin/google-weather-icons
+Revision 7b6464bbf98273d69ae2c2bf8022b9b4ac1981c2, set-6/light, at the user's request.
+All icon rights belong to Google. Upstream is reference/educational, not an open redistribution licence. These assets are excluded from our MIT code licence.
+No Google or KaiOS Technologies affiliation or endorsement is claimed.

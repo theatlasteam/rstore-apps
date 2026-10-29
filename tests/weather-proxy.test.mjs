@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import worker,{weatherForecast} from '../service/src/index.js';
+import fs from 'node:fs';
+const fixture=JSON.parse(fs.readFileSync(new URL('../projects/refresh-weather/research/forecast.json',import.meta.url)));
+const realFetch=globalThis.fetch;let calls=0;
+globalThis.fetch=async(url,options)=>{calls++;assert(url.startsWith('https://api.open-meteo.com/v1/forecast?latitude=55.76&longitude=37.62&'));assert(options.signal);return new Response(JSON.stringify(fixture));};
+let r=await weatherForecast(new URL('https://example.test/weather/forecast?latitude=55.75581&longitude=37.61733'));assert.equal(r.status,200);assert.equal((await r.json()).daily.time.length,7);assert.equal(calls,1);
+for(const query of ['','?latitude=100&longitude=0','?latitude=55&longitude=nan','?latitude=https://example.com&longitude=0']){r=await weatherForecast(new URL('https://example.test/weather/forecast'+query));assert.equal(r.status,400);}assert.equal(calls,1);
+globalThis.fetch=async()=>new Response('x'.repeat(13000));await assert.rejects(weatherForecast(new URL('https://example.test/weather/forecast?latitude=55&longitude=37')),/too large/i);
+globalThis.fetch=realFetch;
+console.log('PASS weather fallback: fixed upstream, rounded/bounded coordinates, invalid inputs rejected, 12KB response cap.');

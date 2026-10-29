@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": 1793268294,
+  "generated_at": 1793271557,
   "apps": [
     {
       "name": "10000h",
@@ -301,6 +301,55 @@
         },
         "en": {
           "description": "Simple Google Authenticator alternative"
+        }
+      }
+    },
+    {
+      "slug": "refresh-weather",
+      "name": "Refresh Weather",
+      "description": "Native-style KaiOS weather: current conditions, hourly and 7-day forecasts, location and saved cities. No API key.",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-weather/icon.png",
+      "git_repo": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-weather",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-weather/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-weather/manifest.webapp"
+      },
+      "type": "privileged",
+      "license": "MIT (code); Google icons excluded",
+      "author": [
+        "Atlas Messenger"
+      ],
+      "maintainer": [
+        "Atlas Messenger"
+      ],
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "weather; forecast; geolocation; kaios-refresh",
+        "categories": [
+          "utility"
+        ]
+      },
+      "screenshots": [],
+      "sha256": "bb397499f5776a639147c1be2a99e3c586a93dfe7c5028c343abb6148982e34d",
+      "packageBytes": 42375,
+      "version": "1.0.1",
+      "permissions": [
+        "geolocation",
+        "systemXHR",
+        "storage"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": false,
+      "manualOnly": false,
+      "installSupported": true,
+      "locales": {
+        "ru": {
+          "name": "Погода Refresh",
+          "description": "Погода KaiOS Refresh без API-ключа: текущее состояние, прогноз на 24 часа и 7 дней. Местоположение с разрешения, поиск и сохранение городов, офлайн-кэш. Иконки Google, авторство указано."
+        },
+        "en": {
+          "description": "Native-style KaiOS weather without an API key. Current conditions, 24 hours and 7 days; opt-in location, saved cities and offline cache. Google icon credits included."
         }
       }
     }

@@ -12,7 +12,7 @@ async function send(url,method,body,local,binary,progress){
  if(binary){if(progress)progress(bytes.length,bytes.length);return bytes;}return JSON.parse(bytes);
 }
 async function test(){
- const result=await api('/api/catalog',false,null,send,tr);assert.equal(result.apps.length,6);store['rstore.catalog']=JSON.stringify(result.apps);
+ const result=await api('/api/catalog',false,null,send,tr);assert.equal(result.apps.length,catalog.apps.length);store['rstore.catalog']=JSON.stringify(result.apps);
  for(const app of result.apps){
   const meta=await api('/api/app/'+app.id,false,null,send,tr);assert.equal(meta.sha256,app.sha256);assert.equal(meta.bytes,app.packageBytes);
   const data=await api(meta.package,true,null,send,tr);assert.equal(data.length,meta.bytes);assert.equal(crypto.createHash('sha256').update(data).digest('hex'),meta.sha256);
@@ -38,6 +38,6 @@ async function test(){
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'client/manifest.webapp')));assert(manifest.csp.includes('connect-src \'self\' https://raw.githubusercontent.com http://127.0.0.1:17891'));assert(!manifest.csp.includes('workers.dev'));
  for(const lang of ['ru','en']){const d=JSON.parse(fs.readFileSync(path.join(root,'client/locales/'+lang+'.json')));assert(d['download-stalled']);assert(d['about-body'].includes('0.1.4'));}
  assert(calls.every(url=>!url.includes('workers.dev')));
- console.log('PASS: six GitHub packages + SHA-256, metadata, cached catalog, Wallace manual-only, URL restrictions, certified rejection, 16KiB stall timeout, no remote key leakage, local installer unchanged, CSP and localization.');
+ console.log('PASS: GitHub packages + SHA-256, metadata, cached catalog, Wallace manual-only, URL restrictions, certified rejection, 16KiB stall timeout, no remote key leakage, local installer unchanged, CSP and localization.');
 }
 test().catch(e=>{console.error(e);process.exit(1);});

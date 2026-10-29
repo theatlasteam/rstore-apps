@@ -1,0 +1,45 @@
+{
+  "name": "Weather",
+  "description": "Weather for KaiOS Refresh. No API key.",
+  "version": "1.0.1",
+  "type": "privileged",
+  "origin": "app://refresh-weather",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "Show your approximate local forecast when you choose My location"
+    },
+    "systemXHR": {},
+    "storage": {}
+  },
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "ru": {
+      "name": "Погода",
+      "description": "Погода KaiOS Refresh без API-ключа"
+    },
+    "ru-RU": {
+      "name": "Погода"
+    },
+    "en": {
+      "name": "Weather"
+    },
+    "en-US": {
+      "name": "Weather"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.open-meteo.com https://geocoding-api.open-meteo.com https://rstore.holy-voice-dd33.workers.dev; object-src 'none'"
+}

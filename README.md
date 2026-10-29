@@ -53,3 +53,7 @@ Added Wallace Toolbox (Unlicense; manual ZIP/WebIDE installation only), KaiAuth 
 The client now reads the catalog, per-app manifests, and ZIP packages directly from this GitHub repository on raw.githubusercontent.com. Cloudflare Workers is not used by the client. The legacy read-only Worker remains available for older clients. The client retains SHA-256 and exact-size verification before passing a package to the unchanged local installer. Remote requests stop after 20 seconds without progress; incomplete packages are never installed. Wallace Toolbox remains ZIP/manual-installation only.
 
 Run `node tests/github-direct.test.cjs` for transport, timeout, permission-policy, CSP and integrity regression tests. This does not assert that community apps run correctly on a phone.
+
+### Refresh Weather
+
+The catalog includes our KaiOS Refresh weather app: no API key, opt-in geolocation, saved cities, 24-hour/7-day forecasts, offline cache and RU/EN. Code and original launcher icon: MIT. Requested Google weather symbols retain Google rights and are explicitly excluded from the MIT grant; no open asset redistribution licence was found upstream. Data: Open-Meteo CC BY 4.0 (free non-commercial API), city search: GeoNames via Open-Meteo. See projects/refresh-weather for source, privacy information, credits and tests. GPS hardware success is not asserted.
