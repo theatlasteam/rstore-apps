@@ -1,7 +1,7 @@
 {
   "name": "RStore",
   "description": "Community app store for KaiOS Refresh",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "privileged",
   "origin": "app://rstore",
   "launch_path": "/index.html",
@@ -22,7 +22,7 @@
   "chrome": {
     "statusbar": "overlap"
   },
-  "default_locale": "ru",
+  "default_locale": "en-US",
   "locales": {
     "ru": {
       "name": "RStore",
@@ -31,6 +31,14 @@
     "en-US": {
       "name": "RStore",
       "description": "Community app store for KaiOS Refresh"
+    },
+    "en": {
+      "name": "RStore",
+      "description": "Community app store for KaiOS Refresh"
+    },
+    "ru-RU": {
+      "name": "RStore",
+      "description": "Коммьюнити-магазин KaiOS Refresh"
     }
   },
   "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self' https://raw.githubusercontent.com data:; connect-src 'self' https://rstore.holy-voice-dd33.workers.dev http://127.0.0.1:17891; object-src 'none'"

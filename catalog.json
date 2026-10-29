@@ -34,7 +34,15 @@
       "version": "1.0.0",
       "permissions": [],
       "runtimeTested": false,
-      "requiresRoot": false
+      "requiresRoot": false,
+      "locales": {
+        "ru": {
+          "description": "Учитывайте время занятий и развивайте навыки по правилу 10 000 часов."
+        },
+        "en": {
+          "description": "Strengthen your skills with 10000 hours rule."
+        }
+      }
     },
     {
       "name": "Users Tetris",
@@ -73,7 +81,15 @@
         "softkey"
       ],
       "runtimeTested": false,
-      "requiresRoot": false
+      "requiresRoot": false,
+      "locales": {
+        "ru": {
+          "description": "Простой тетрис на одном экране."
+        },
+        "en": {
+          "description": "A simple one-screen tetris player"
+        }
+      }
     }
   ]
 }

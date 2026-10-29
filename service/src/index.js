@@ -1,6 +1,6 @@
 import { unzipSync, strFromU8 } from 'fflate';
 
-export const CATALOG = 'https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/catalog.json?v=3';
+export const CATALOG = 'https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/catalog.json?v=4';
 export const MAX_PACKAGE = 12 * 1024 * 1024;
 const MAX_EXPANDED = 32 * 1024 * 1024;
 const denied = new Set(['webapps-manage', 'permissions', 'engmode-extension', 'settings', 'power', 'embed-apps']);
@@ -75,7 +75,7 @@ export default {
    if(u.pathname==='/')return json({name:'RStore',repository:'https://github.com/theatlasteam/rstore-apps',catalog:'/api/catalog',health:'/health',package:'/api/package/{app-id}',platform:'KaiOS 2.5'});
    if(u.pathname==='/health')return json({name:'RStore',version:'0.1.0',installer:'local-root-companion',platform:'KaiOS 2.5'});
    if(u.pathname==='/api/catalog'){
-    const apps=await catalog();return json({source:CATALOG,platform:'KaiOS 2.5',compatibility:'Package availability and runtime compatibility vary. Not audited.',apps:apps.map(a=>({id:a.slug,name:a.name,description:a.description,icon:a.icon,author:a.author,source:a.git_repo||a.website||a.download.url,category:a.meta?.categories?.[0]||'utility',type:a.type,requiresRoot:typeof a.requiresRoot==='boolean'?a.requiresRoot:null,license:a.license||null,version:a.version,packageBytes:a.packageBytes,sha256:a.sha256,runtimeTested:a.runtimeTested===true,hasAds:a.has_ads===true,hasTracking:a.has_tracking===true}))});
+    const apps=await catalog();return json({source:CATALOG,platform:'KaiOS 2.5',compatibility:'Package availability and runtime compatibility vary. Not audited.',apps:apps.map(a=>({id:a.slug,name:a.name,description:a.description,locales:a.locales||{},icon:a.icon,author:a.author,source:a.git_repo||a.website||a.download.url,category:a.meta?.categories?.[0]||'utility',type:a.type,requiresRoot:typeof a.requiresRoot==='boolean'?a.requiresRoot:null,license:a.license||null,version:a.version,packageBytes:a.packageBytes,sha256:a.sha256,runtimeTested:a.runtimeTested===true,hasAds:a.has_ads===true,hasTracking:a.has_tracking===true}))});
    }
    const match=u.pathname.match(/^\/api\/(app|package)\/([a-zA-Z0-9._-]{1,100})$/);
    if(match){

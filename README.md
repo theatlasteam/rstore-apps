@@ -37,3 +37,8 @@ Run `python3 scripts/validate.py` before committing package updates. Device-side
 `client/` contains the KaiOS 2.x RStore client, its gold package icon and launcher PNG sizes. The icon derives from the artwork provided for RStore. The UI uses KaiOS-style lists, D-pad navigation and softkeys. The publisher is Atlas Messenger; RStore is independent of KaiOS Technologies.
 
 The public `config.js` deliberately has an empty local-installer key. Installing this source ZIP alone does not grant installation access. Device-specific setup must provision an authenticated local companion; do not publish device keys or personalized packages.
+
+
+## Localization
+
+RStore 0.1.2 includes Russian and English UI translations in `client/locales/`. `client/l10n.js` bundles these dictionaries for offline startup. The phone language selects the UI language; unsupported languages fall back to English. Catalog entries can provide `locales.<language>.description` and `name`; missing translations fall back to the upstream text. The current two catalog descriptions have Russian translations. Language changes do not interrupt an active installation or confirmation dialog.
