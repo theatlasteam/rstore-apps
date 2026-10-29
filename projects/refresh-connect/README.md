@@ -1,4 +1,4 @@
-# Refresh Connect
+# Refresh Tunnel
 
 Standalone catalogue application, not a page inside RStore. VLESS/REALITY/TCP photo-QR import and manual native Xray control. Install from its ordinary RStore card using an updated root companion: it verifies the public ZIP and lifecycle hooks, installs Xray, then provisions a per-app restricted capability into the installed copy only. Never publish that personalized installed copy or a real VLESS profile.
 

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+ <title>Refresh Tunnel</title>
+ <defs><linearGradient id="body" x1="20" y1="10" x2="109" y2="119" gradientUnits="userSpaceOnUse"><stop stop-color="#415FE3"/><stop offset="1" stop-color="#21388F"/></linearGradient><linearGradient id="route" x1="26" y1="94" x2="98" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#B6F5F0"/><stop offset="1" stop-color="#56D6E1"/></linearGradient></defs>
+ <rect x="6" y="6" width="116" height="116" rx="29" fill="url(#body)"/>
+ <path d="M33 91V58a31 31 0 0 1 62 0v33" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+ <path d="M49 87V59a15 15 0 0 1 30 0v28" fill="#15265F"/>
+ <path d="M27 99h26c7 0 11-4 11-11V66" fill="none" stroke="url(#route)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="m54 74 10-11 10 11" fill="none" stroke="#71E4E5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

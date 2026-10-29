@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": 1793284577,
+  "generated_at": 1793284831,
   "apps": [
     {
       "name": "10000h",
@@ -355,11 +355,11 @@
     },
     {
       "slug": "refresh-connect",
-      "name": "Refresh Connect",
+      "name": "Refresh Tunnel",
       "description": "QR profile import and a native VLESS / REALITY / TCP client. Requires the updated Refresh installer and root. Installs Xray as a dependency; no autostart. Currently a local SOCKS client, not a system-wide VPN.",
       "locales": {
         "ru": {
-          "name": "Refresh Connect",
+          "name": "Refresh Tunnel",
           "description": "Отдельное приложение с QR-импортом VLESS / REALITY / TCP. Требуются root и обновлённый установщик Refresh. Xray ставится как зависимость. Пока локальный SOCKS-клиент: не общесистемный VPN, без автозапуска."
         }
       },
@@ -386,9 +386,9 @@
         ]
       },
       "screenshots": [],
-      "sha256": "7f505de3a35fd64e26fc11991a2e5764ddd6712958a984c0cb438bc07cf651f7",
-      "packageBytes": 1133965,
-      "version": "0.1.1",
+      "sha256": "2edbb35bb244a48205a16c416110c16a90dcf0bce7c89101fac5ef04fcb3a4ee",
+      "packageBytes": 1154983,
+      "version": "0.1.2",
       "permissions": [
         "systemXHR",
         "storage"
