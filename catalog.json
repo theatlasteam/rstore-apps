@@ -33,7 +33,8 @@
       "packageBytes": 435787,
       "version": "1.0.0",
       "permissions": [],
-      "runtimeTested": false
+      "runtimeTested": false,
+      "requiresRoot": false
     },
     {
       "name": "Users Tetris",
@@ -71,7 +72,8 @@
       "permissions": [
         "softkey"
       ],
-      "runtimeTested": false
+      "runtimeTested": false,
+      "requiresRoot": false
     }
   ]
 }

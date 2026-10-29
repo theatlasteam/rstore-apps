@@ -1,7 +1,7 @@
 {
   "name": "RStore",
   "description": "Community app store for KaiOS Refresh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "privileged",
   "origin": "app://rstore",
   "launch_path": "/index.html",

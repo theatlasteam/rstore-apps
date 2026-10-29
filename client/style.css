@@ -4,3 +4,17 @@
 
 /* Flex gap is not available in Gecko 48. */
 .app-row>img{margin-right:.8rem}.detail-head>img{margin-right:1rem}
+
+/* Real page actions, navigable with the D-pad as well as pointer events. */
+.detail-actions{padding:0 1rem 1rem}
+.detail-button{display:block;width:100%;min-height:3.8rem;margin:0 0 .6rem;padding:.7rem .8rem;background:#8000ff;color:#fff;border:.2rem solid transparent;border-radius:.2rem;font-size:1.6rem;font-weight:600;text-align:center;line-height:2rem;white-space:normal}
+.detail-button.secondary{background:var(--rs-bg);color:var(--rs-fg);border-color:#8c8c8c;font-weight:400}
+.detail-button.detail-focused,.detail-button:focus{outline:.2rem solid var(--rs-fg);outline-offset:.2rem}
+.detail-button:disabled{background:#686868;color:#fff;opacity:.8;outline:none}
+.detail-section{padding:1rem;outline:0;border-top:.1rem solid var(--border-color,#ccc)}
+.detail-section h3{font-size:1.6rem;line-height:2.1rem;font-weight:600;margin:0 0 .6rem}
+.detail-description{margin:0;font-size:1.5rem;line-height:2.1rem;white-space:pre-wrap;overflow-wrap:break-word}
+.detail-facts{margin:0;font-size:1.4rem;line-height:1.9rem;overflow-wrap:break-word}
+.detail-facts dt{font-weight:600;margin:.9rem 0 0}.detail-facts dt:first-child{margin-top:0}.detail-facts dd{margin:.2rem 0 0}
+.detail-section.detail-focused{box-shadow:inset .3rem 0 0 #8000ff}
+.package-status{margin:0;padding:0 1rem 1rem;font-size:1.4rem;line-height:1.9rem;color:var(--rs-fg);white-space:pre-wrap}
