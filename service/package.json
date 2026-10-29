@@ -1,0 +1,1 @@
+{"name":"rstore-api","private":true,"type":"module","scripts":{"test":"node --test ../tests/worker.test.mjs"},"dependencies":{"fflate":"0.8.2"}}

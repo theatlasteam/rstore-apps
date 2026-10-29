@@ -16,3 +16,17 @@ Each `apps/<id>/` contains the unchanged inner `application.zip`, extracted mani
 KaiOS 2.x only. Community software is not security-audited. Package validation does not prove runtime compatibility. `runtimeTested` remains false until a real device test succeeds. No paid/proprietary binaries, root tools or certified system apps are mirrored. Updates are reviewed and committed; the catalog does not automatically ingest arbitrary third-party uploads.
 
 See `catalog.json` for the machine-readable catalog.
+
+
+## Cloudflare service
+
+Production API: https://rstore.holy-voice-dd33.workers.dev
+
+- `GET /api/catalog`: RStore catalog, read from this repository.
+- `GET /api/app/10000h`: package version, size, permissions and SHA-256.
+- `GET /api/package/10000h`: actual installable inner application ZIP.
+- `GET /health`: service status.
+
+The source is in `service/`. Deploy from that directory with `bun install` followed by `wrangler deploy` using your own Cloudflare account. No credentials or device installer keys are stored here. Package responses are rejected if their SHA-256 differs from the committed catalog. Only IDs in the catalog are accepted; this is not an arbitrary URL download proxy.
+
+Run `python3 scripts/validate.py` before committing package updates. Device-side installation requires a compatible local installer; this HTTP service does not itself grant system privileges to a browser.

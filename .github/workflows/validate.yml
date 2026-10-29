@@ -1,0 +1,8 @@
+name: Validate catalog
+on: [push, pull_request]
+jobs:
+  packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/validate.py
