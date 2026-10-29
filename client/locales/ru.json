@@ -71,11 +71,17 @@
   "app-uninstalled": "Приложение удалено",
   "uninstall": "Удалить",
   "about": "О RStore",
-  "about-body": "RStore 0.1.2\nНезависимый магазин приложений KaiOS Refresh от Atlas Messenger. Не связан с KaiOS Technologies.",
+  "about-body": "RStore 0.1.3\nНезависимый магазин приложений KaiOS Refresh от Atlas Messenger. Не связан с KaiOS Technologies.",
   "about-hosting": "Каталог и пакеты: GitHub / theatlasteam/rstore-apps.\nСервер загрузок: Cloudflare.\nКоммьюнити-приложения сохраняют авторство и лицензии. Проверка пакета не гарантирует безопасность или совместимость.",
   "refresh-catalog": "Обновить каталог",
   "app-name": "Название приложения",
   "find": "Найти",
   "my-apps": "Мои",
-  "sections": "Разделы"
+  "sections": "Разделы",
+  "download-zip-prefix": "Скачать ZIP · ",
+  "manual-installation": "Только ручная установка",
+  "installation-method": "Способ установки",
+  "open-source": "Исходный проект",
+  "browser-unavailable": "Не удалось открыть браузер для скачивания ZIP.",
+  "zip-download-note": "ZIP откроется в браузере. Это не устанавливает приложение."
 }

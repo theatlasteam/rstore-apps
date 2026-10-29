@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/zjyl1994/KaiAuth",
+  "upstreamPackage": "https://kaiauth.zjyl1994.com/download/kaiauth-omnisd-latest.zip",
+  "upstreamLicense": "https://raw.githubusercontent.com/zjyl1994/KaiAuth/master/LICENSE",
+  "license": "MIT",
+  "sha256": "dba2ff68854feb03ab1946f0423fc98f6ab4179cd0146a919f048cf026283969",
+  "bytes": 101520,
+  "mirroredAt": "2026-10-29T10:04:54.818602+00:00",
+  "modified": false,
+  "compatibility": "KaiOS 2.x package; not runtime-tested",
+  "manualOnly": false
+}

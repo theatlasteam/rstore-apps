@@ -1,0 +1,12 @@
+{
+  "upstream": "https://gitlab.com/suborg/wallace-toolbox",
+  "upstreamPackage": "https://raw.githubusercontent.com/cyan-2048/_store/main/suborg/wallace-toolbox/wallace-toolbox.zip",
+  "upstreamLicense": "https://gitlab.com/sausagenoods/wallace-toolbox/-/raw/master/LICENSE",
+  "license": "Unlicense",
+  "sha256": "1ef0d683530f323805f3d22eeae7c9ab64177e688b3b22973adb2f9fb851cbc5",
+  "bytes": 125441,
+  "mirroredAt": "2026-10-29T10:04:49.221888+00:00",
+  "modified": false,
+  "compatibility": "KaiOS 2.x package; not runtime-tested",
+  "manualOnly": true
+}

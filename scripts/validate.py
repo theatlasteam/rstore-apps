@@ -15,13 +15,19 @@ for app in catalog['apps']:
  assert (folder/'LICENSE').stat().st_size>20
  source=json.loads((folder/'source.json').read_text())
  assert source['sha256']==app['sha256'] and source['upstreamLicense'].startswith('https://')
- assert app['download']['url']==f'https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/{slug}/application.zip'
+ assert app['download']['url']=='https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/'+slug+'/application.zip'
  with zipfile.ZipFile(folder/'application.zip') as archive:
   assert archive.testzip() is None
   assert sum(i.file_size for i in archive.infolist())<=32*1024*1024
   manifest=json.loads(archive.read('manifest.webapp'))
   assert manifest==json.loads((folder/'manifest.webapp').read_text())
-  assert manifest.get('type','web') in ['web','privileged']
+  if app.get('manualOnly'):
+   assert app.get('installSupported') is False and app['type']=='root'
+   assert manifest.get('type')=='certified'
+   assert app['installationNotes']['ru'] and app['installationNotes']['en']
+  else:
+   assert manifest.get('type','web') in ['web','privileged']
+   assert not any(p in ['webapps-manage','permissions','engmode-extension','settings','power','embed-apps'] for p in manifest.get('permissions',{}))
   assert manifest['name'] and manifest.get('launch_path','/index.html').lstrip('/').split('?')[0] in archive.namelist()
  print('PASS',slug,len(data),'bytes')
 print('PASS',len(seen),'mirrored packages')

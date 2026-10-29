@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/user18130814200115-2/User-s-Weather",
+  "upstreamPackage": "https://github.com/user18130814200115-2/User-s-Weather/releases/download/v4.4/Master-Build.zip",
+  "upstreamLicense": "https://raw.githubusercontent.com/user18130814200115-2/User-s-Weather/master/LICENSE",
+  "license": "MIT",
+  "sha256": "91ba6ed7ef2f2fb58c4ab5fbf620a6c49dc1d2377d7648856ffcca4b2632006a",
+  "bytes": 34354,
+  "mirroredAt": "2026-10-29T10:04:51.158137+00:00",
+  "modified": false,
+  "compatibility": "KaiOS 2.x package; not runtime-tested",
+  "manualOnly": false
+}

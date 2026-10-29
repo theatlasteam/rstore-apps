@@ -71,11 +71,17 @@
   "app-uninstalled": "App uninstalled",
   "uninstall": "Uninstall",
   "about": "About RStore",
-  "about-body": "RStore 0.1.2\nAn independent KaiOS Refresh app store by Atlas Messenger. Not affiliated with KaiOS Technologies.",
+  "about-body": "RStore 0.1.3\nAn independent KaiOS Refresh app store by Atlas Messenger. Not affiliated with KaiOS Technologies.",
   "about-hosting": "Catalog and packages: GitHub / theatlasteam/rstore-apps.\nDownloads: Cloudflare.\nCommunity apps retain their authorship and licenses. Package verification does not guarantee safety or compatibility.",
   "refresh-catalog": "Refresh catalog",
   "app-name": "App name",
   "find": "Find",
   "my-apps": "My apps",
-  "sections": "Sections"
+  "sections": "Sections",
+  "download-zip-prefix": "Download ZIP · ",
+  "manual-installation": "Manual installation only",
+  "installation-method": "Installation method",
+  "open-source": "Source project",
+  "browser-unavailable": "Could not open the browser to download the ZIP.",
+  "zip-download-note": "The ZIP will open in the browser. This does not install the app."
 }

@@ -13,7 +13,7 @@ Each `apps/<id>/` contains the unchanged inner `application.zip`, extracted mani
 
 ## Compatibility and trust
 
-KaiOS 2.x only. Community software is not security-audited. Package validation does not prove runtime compatibility. `runtimeTested` remains false until a real device test succeeds. No paid/proprietary binaries, root tools or certified system apps are mirrored. Updates are reviewed and committed; the catalog does not automatically ingest arbitrary third-party uploads.
+KaiOS 2.x only. Community software is not security-audited. Package validation does not prove runtime compatibility. `runtimeTested` remains false until a real device test succeeds. No paid/proprietary binaries are mirrored. Root/certified tools are clearly marked manual-only; the ordinary installer never grants their system permissions. Updates are reviewed and committed; the catalog does not automatically ingest arbitrary third-party uploads.
 
 See `catalog.json` for the machine-readable catalog.
 
@@ -42,3 +42,8 @@ The public `config.js` deliberately has an empty local-installer key. Installing
 ## Localization
 
 RStore 0.1.2 includes Russian and English UI translations in `client/locales/`. `client/l10n.js` bundles these dictionaries for offline startup. The phone language selects the UI language; unsupported languages fall back to English. Catalog entries can provide `locales.<language>.description` and `name`; missing translations fall back to the upstream text. The current two catalog descriptions have Russian translations. Language changes do not interrupt an active installation or confirmation dialog.
+
+
+## Expanded catalog
+
+Added Wallace Toolbox (Unlicense; manual ZIP/WebIDE installation only), KaiAuth (MIT), Contact Search (MIT), and Users Weather (MIT). Packages are mirrored with original code, permissions, license text, source URLs, SHA-256 and Russian/English descriptions. None is claimed to be runtime-tested on the Nokia 6300. Wallace requests certified permissions and can modify or erase system data; downloading its ZIP is not installation.

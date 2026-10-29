@@ -1,0 +1,12 @@
+{
+  "upstream": "https://github.com/strukturart/search",
+  "upstreamPackage": "https://github.com/strukturart/search/releases/latest/download/search.zip",
+  "upstreamLicense": "https://raw.githubusercontent.com/strukturart/search/master/LICENSE.md",
+  "license": "MIT",
+  "sha256": "3d3f2bbebaf2bc17af801ffd5ba18cbcbad97f0c29c6c1ed51a9396a36a72dbf",
+  "bytes": 480403,
+  "mirroredAt": "2026-10-29T10:04:53.572142+00:00",
+  "modified": false,
+  "compatibility": "KaiOS 2.x package; not runtime-tested",
+  "manualOnly": false
+}

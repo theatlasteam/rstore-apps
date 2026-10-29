@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "name": "contact",
+  "description": "contact app for KaiOs",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "icons": {
+    "56": "/icons/icon-56-56.png",
+    "112": "/icons/icon-112-112.png"
+  },
+  "developer": {
+    "name": "strukturart",
+    "url": "https://github.com/strukturart/search"
+  },
+  "permissions": {
+    "contacts": {
+      "access": "readwrite"
+    },
+    "spatialnavigation-app-manage": {
+      "navigator.spatialNavigationEnabled": false
+    },
+    "systemXHR": {
+      "description": "Required to load remote content"
+    },
+    "telephony": {
+      "description": "Required to control telephony functions"
+    },
+    "audio-channel-telephony": {},
+    "attention": {},
+    "mobileconnection": {}
+  },
+  "locales": {
+    "en-US": {
+      "name": "Contact",
+      "subtitle": "Adressbook",
+      "description": ""
+    },
+    "de-DE": {
+      "name": "Kontakte",
+      "subtitle": "Adressbuch",
+      "description": ""
+    },
+    "he": {
+      "name": "Kontakte",
+      "subtitle": "Adressbuch",
+      "description": ""
+    }
+  },
+  "default_locale": "en-US"
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": 1793266199,
+  "generated_at": 1793268294,
   "apps": [
     {
       "name": "10000h",
@@ -88,6 +88,219 @@
         },
         "en": {
           "description": "A simple one-screen tetris player"
+        }
+      }
+    },
+    {
+      "name": "Wallace Toolbox",
+      "description": "Universal toolbox for KaiOS internal tweaking.",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/wallacetoolbox/icon.png",
+      "git_repo": "https://gitlab.com/suborg/wallace-toolbox",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/wallacetoolbox/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/wallacetoolbox/manifest.webapp"
+      },
+      "type": "root",
+      "license": "Unlicense",
+      "author": [
+        "Luxferre"
+      ],
+      "maintainer": [
+        "Cyan <cyankindasus@protonmail.com>"
+      ],
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "root, 8110, bananahackers, adb, reset, imei, mods, wallace",
+        "categories": [
+          "utility"
+        ]
+      },
+      "slug": "wallacetoolbox",
+      "screenshots": [],
+      "sha256": "1ef0d683530f323805f3d22eeae7c9ab64177e688b3b22973adb2f9fb851cbc5",
+      "packageBytes": 125441,
+      "version": "0.0.6",
+      "permissions": [
+        "engmode-extension",
+        "external-api",
+        "kaiosextension",
+        "jrdextension",
+        "power",
+        "settings",
+        "device-storage:apps",
+        "webapps-manage"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": null,
+      "manualOnly": true,
+      "installSupported": false,
+      "locales": {
+        "ru": {
+          "description": "Системные инструменты KaiOS: отладка и расширенные настройки. Некоторые функции могут сбросить данные или изменить системные параметры. Нужна специальная установка через WebIDE; автоматическая установка RStore не поддерживается."
+        },
+        "en": {
+          "description": "Universal toolbox for KaiOS internal tweaking. Manual installation only. Some actions can erase data or change system settings."
+        }
+      },
+      "installationNotes": {
+        "ru": "Требует certified/system-разрешений. Установка через WebIDE; установщик RStore эти права не выдаёт. Скачивание ZIP не устанавливает приложение.",
+        "en": "Requires certified/system permissions. Install using WebIDE; the RStore installer does not grant these privileges. Downloading a ZIP does not install the app."
+      }
+    },
+    {
+      "name": "Users Weather",
+      "description": "A simple app that interfactes with wttr.in for local weather information and forecasts",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/usersweather/icon.png",
+      "screenshots": [
+        "https://banana-hackers.gitlab.io/store-db/icons/usersweather/screenshot0.png"
+      ],
+      "git_repo": "https://github.com/user18130814200115-2/User-s-Weather",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/usersweather/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/usersweather/manifest.webapp"
+      },
+      "type": "packaged",
+      "license": "MIT",
+      "author": [
+        "User18130814200115"
+      ],
+      "maintainer": [
+        "User18130814200115"
+      ],
+      "donation": "https://github.com/user18130814200115-2/User-s-Weather/blob/master/Donations.md",
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "weather",
+        "categories": [
+          "news",
+          "utility"
+        ]
+      },
+      "slug": "usersweather",
+      "sha256": "91ba6ed7ef2f2fb58c4ab5fbf620a6c49dc1d2377d7648856ffcca4b2632006a",
+      "packageBytes": 34354,
+      "version": "2",
+      "permissions": [
+        "softkey"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": false,
+      "manualOnly": false,
+      "installSupported": true,
+      "locales": {
+        "ru": {
+          "description": "Прогноз погоды из wttr.in. Для получения прогноза нужен интернет."
+        },
+        "en": {
+          "description": "A simple app that interfactes with wttr.in for local weather information and forecasts"
+        }
+      }
+    },
+    {
+      "name": "Contact search",
+      "description": "With this app you can search your contacts, start calls and sms. I wrote it because the KaiOs standart app is extremely slow.\n",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/contact-search/icon.png",
+      "screenshots": [],
+      "license": "MIT",
+      "git_repo": "https://github.com/strukturart/search",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/contact-search/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/contact-search/manifest.webapp"
+      },
+      "author": [
+        "perry<https://github.com/strukturart>"
+      ],
+      "maintainer": [
+        "perry<https://github.com/strukturart>"
+      ],
+      "has_tracking": false,
+      "has_ads": false,
+      "donation": "https://paypal.me/strukturart",
+      "meta": {
+        "tags": "travel; utility;",
+        "categories": [
+          "utility"
+        ]
+      },
+      "type": "privileged",
+      "slug": "contact-search",
+      "sha256": "3d3f2bbebaf2bc17af801ffd5ba18cbcbad97f0c29c6c1ed51a9396a36a72dbf",
+      "packageBytes": 480403,
+      "version": "1.0.0",
+      "permissions": [
+        "contacts",
+        "spatialnavigation-app-manage",
+        "systemXHR",
+        "telephony",
+        "audio-channel-telephony",
+        "attention",
+        "mobileconnection"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": false,
+      "manualOnly": false,
+      "installSupported": true,
+      "locales": {
+        "ru": {
+          "description": "Поиск контактов на телефоне."
+        },
+        "en": {
+          "description": "With this app you can search your contacts, start calls and sms. I wrote it because the KaiOs standart app is extremely slow.\n"
+        }
+      }
+    },
+    {
+      "name": "KaiAuth",
+      "description": "Simple Google Authenticator alternative",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/kaiauth/icon.png",
+      "screenshots": [
+        "https://banana-hackers.gitlab.io/store-db/icons/kaiauth/screenshot0.png",
+        "https://banana-hackers.gitlab.io/store-db/icons/kaiauth/screenshot1.png",
+        "https://banana-hackers.gitlab.io/store-db/icons/kaiauth/screenshot2.png"
+      ],
+      "website": "https://kaiauth.zjyl1994.com",
+      "git_repo": "https://github.com/zjyl1994/KaiAuth",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/kaiauth/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/kaiauth/manifest.webapp"
+      },
+      "type": "privileged",
+      "license": "MIT",
+      "author": [
+        "zjyl1994 <me@zjyl1994.com>"
+      ],
+      "maintainer": [
+        "zjyl1994 <me@zjyl1994.com>"
+      ],
+      "donation": "https://www.buymeacoffee.com/zjyl1994",
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "2fa; totp; authenticator",
+        "categories": [
+          "utility"
+        ]
+      },
+      "slug": "kaiauth",
+      "sha256": "dba2ff68854feb03ab1946f0423fc98f6ab4179cd0146a919f048cf026283969",
+      "packageBytes": 101520,
+      "version": "1.1.1",
+      "permissions": [
+        "video-capture",
+        "device-storage:sdcard"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": false,
+      "manualOnly": false,
+      "installSupported": true,
+      "locales": {
+        "ru": {
+          "description": "Генератор одноразовых кодов двухфакторной аутентификации."
+        },
+        "en": {
+          "description": "Simple Google Authenticator alternative"
         }
       }
     }
