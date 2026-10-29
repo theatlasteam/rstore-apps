@@ -1,0 +1,37 @@
+{
+  "name": "RStore",
+  "description": "Community app store for KaiOS Refresh",
+  "version": "0.1.0",
+  "type": "privileged",
+  "origin": "app://rstore",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  },
+  "permissions": {
+    "systemXHR": {},
+    "storage": {}
+  },
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "ru",
+  "locales": {
+    "ru": {
+      "name": "RStore",
+      "description": "Коммьюнити-магазин KaiOS Refresh"
+    },
+    "en-US": {
+      "name": "RStore",
+      "description": "Community app store for KaiOS Refresh"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self' https://raw.githubusercontent.com data:; connect-src 'self' https://rstore.holy-voice-dd33.workers.dev http://127.0.0.1:17891; object-src 'none'"
+}

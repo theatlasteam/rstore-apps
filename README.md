@@ -30,3 +30,10 @@ Production API: https://rstore.holy-voice-dd33.workers.dev
 The source is in `service/`. Deploy from that directory with `bun install` followed by `wrangler deploy` using your own Cloudflare account. No credentials or device installer keys are stored here. Package responses are rejected if their SHA-256 differs from the committed catalog. Only IDs in the catalog are accepted; this is not an arbitrary URL download proxy.
 
 Run `python3 scripts/validate.py` before committing package updates. Device-side installation requires a compatible local installer; this HTTP service does not itself grant system privileges to a browser.
+
+
+## Phone client
+
+`client/` contains the KaiOS 2.x RStore client, its gold package icon and launcher PNG sizes. The icon derives from the artwork provided for RStore. The UI uses KaiOS-style lists, D-pad navigation and softkeys. The publisher is Atlas Messenger; RStore is independent of KaiOS Technologies.
+
+The public `config.js` deliberately has an empty local-installer key. Installing this source ZIP alone does not grant installation access. Device-specific setup must provision an authenticated local companion; do not publish device keys or personalized packages.
