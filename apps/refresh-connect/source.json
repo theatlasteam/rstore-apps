@@ -1,8 +1,8 @@
 {
   "upstream": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-connect",
   "upstreamLicense": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/projects/refresh-connect/app/LICENSE",
-  "sha256": "2edbb35bb244a48205a16c416110c16a90dcf0bce7c89101fac5ef04fcb3a4ee",
-  "packageBytes": 1154983,
+  "sha256": "76c81840ff2e0a3b6cde35df8b5877d2748f3c1332e31bbbbbc1da2c802d1ad3",
+  "packageBytes": 1155609,
   "licenseNotes": "MIT app code; jsQR MIT and bundled fonts retain their notices. Xray MPL-2.0 is installed separately as a pinned native dependency. No credentials in the public ZIP.",
   "tests": "Native config validation and DOM/QR tests; optical QR and real server connection not yet verified."
 }
