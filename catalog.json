@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": 1793284831,
+  "generated_at": 1793344767,
   "apps": [
     {
       "name": "10000h",
@@ -406,6 +406,67 @@
           "install": "refresh-hooks/install.sh",
           "uninstall": "refresh-hooks/uninstall.sh"
         }
+      }
+    },
+    {
+      "slug": "telekram",
+      "name": "Telekram",
+      "description": "Unofficial Telegram client for KaiOS 2.5 by Cyan. Original upstream build; sign-in and messaging have not been tested on this phone.",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/telekram/icon.png",
+      "git_repo": "https://github.com/cyan-2048/solid-telekram",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/telekram/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/telekram/manifest.webapp"
+      },
+      "type": "privileged",
+      "license": "GPL-3.0",
+      "author": [
+        "Cyan"
+      ],
+      "maintainer": [
+        "RStore (unmodified upstream mirror)"
+      ],
+      "meta": {
+        "tags": "telegram; telekram; messenger; kaios 2.5",
+        "categories": [
+          "social"
+        ]
+      },
+      "screenshots": [],
+      "sha256": "0bf93222643bb60ee7a9689cf7ba6095cb2a8af47ea19f63190376dd88b60388",
+      "packageBytes": 2023461,
+      "version": "1.3.0",
+      "permissions": [
+        "spatialnavigation-app-manage",
+        "systemXHR",
+        "audio-capture",
+        "video-capture",
+        "push",
+        "serviceworker",
+        "desktop-notification",
+        "tcp-socket",
+        "storage",
+        "device-storage:sdcard",
+        "contacts",
+        "volumemanager",
+        "audio-channel-normal",
+        "audio-channel-content"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": false,
+      "manualOnly": false,
+      "installSupported": true,
+      "locales": {
+        "ru": {
+          "description": "Неофициальный клиент Telegram для KaiOS 2.5 от Cyan. Оригинальная сборка автора, без изменений. Вход и переписка на этом телефоне ещё не проверены."
+        },
+        "en": {
+          "description": "Unofficial Telegram client for KaiOS 2.5 by Cyan. Unmodified upstream build; phone sign-in and messaging not yet tested."
+        }
+      },
+      "installationNotes": {
+        "ru": "Сборка для KaiOS 2.5, не для KaiOS 3/4. Самому приложению root не нужен. Telegram потребует вход; проверьте разрешения на микрофон, камеру, контакты и SD-карту. Языки интерфейса приложения оставлены авторские.",
+        "en": "KaiOS 2.5 build, not KaiOS 3/4. The app itself does not require root. Telegram sign-in is required; review microphone, camera, contacts and SD-card permissions. Upstream interface languages are unchanged."
       }
     }
   ]
