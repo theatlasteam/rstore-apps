@@ -1,0 +1,35 @@
+name: Publish Refresh Mail preview
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-refresh-mail.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-refresh-mail
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test protocol and build the preview package
+        run: |
+          node projects/refresh-mail/tests/imap.test.cjs
+          python3 scripts/publish-refresh-mail.py
+      - name: Validate catalog and RStore client
+        run: |
+          python3 scripts/validate.py
+          node tests/github-direct.test.cjs
+      - name: Publish package, icon and listing
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add catalog.json apps/refresh-mail
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish experimental Refresh Mail preview'
+            git push origin HEAD:main
+          fi
