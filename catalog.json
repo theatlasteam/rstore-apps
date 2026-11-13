@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": 1793345819,
+  "generated_at": 1794576331,
   "apps": [
     {
       "name": "10000h",
@@ -467,6 +467,57 @@
           "install": "refresh-hooks/install.sh",
           "uninstall": "refresh-hooks/uninstall.sh"
         }
+      }
+    },
+    {
+      "slug": "refresh-mail",
+      "name": "Refresh Mail",
+      "description": "Experimental read-only Gmail client using a Google app password. Direct IMAP over TLS. No sending or attachments yet; not tested on a real phone.",
+      "icon": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-mail/icon.png",
+      "git_repo": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-mail",
+      "download": {
+        "url": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-mail/application.zip",
+        "manifest": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/apps/refresh-mail/manifest.webapp"
+      },
+      "type": "privileged",
+      "license": "MIT (code); bundled fonts retain their licences",
+      "author": [
+        "Atlas Messenger"
+      ],
+      "maintainer": [
+        "Atlas Messenger"
+      ],
+      "has_ads": false,
+      "has_tracking": false,
+      "meta": {
+        "tags": "refresh;mail;gmail;imap;preview",
+        "categories": [
+          "utility"
+        ]
+      },
+      "screenshots": [],
+      "sha256": "5600c6191ce1bc8d936f25484b573ad50ab16c07bc4f56ab29d631dd66b64f63",
+      "packageBytes": 1065541,
+      "version": "0.1.0",
+      "permissions": [
+        "tcp-socket"
+      ],
+      "runtimeTested": false,
+      "requiresRoot": false,
+      "manualOnly": false,
+      "installSupported": true,
+      "locales": {
+        "ru": {
+          "name": "Refresh Mail",
+          "description": "Экспериментальная почта Gmail: чтение 20 последних писем через пароль приложения, подключение к Gmail напрямую по TLS. Отправки и вложений пока нет. На телефоне не проверена."
+        },
+        "en": {
+          "description": "Experimental read-only Gmail client using an app password. Direct IMAP over TLS; no sending or attachments yet. Not tested on a real phone."
+        }
+      },
+      "installationNotes": {
+        "ru": "Нужны Gmail и пароль приложения Google с двухэтапной аутентификацией. Пароль не сохраняется. Предварительная версия, на устройстве не проверена.",
+        "en": "Requires Gmail and a Google app password with two-step verification. Password is not saved. Preview; not tested on device."
       }
     }
   ]

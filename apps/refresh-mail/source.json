@@ -1,0 +1,8 @@
+{
+  "upstream": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-mail",
+  "upstreamLicense": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/projects/refresh-mail/app/LICENSE",
+  "sha256": "5600c6191ce1bc8d936f25484b573ad50ab16c07bc4f56ab29d631dd66b64f63",
+  "packageBytes": 1065541,
+  "licenseNotes": "MIT for app code; shared Refresh runtime and bundled fonts retain their licences, included in the package.",
+  "tests": "Mock IMAP and MIME checks only; not tested with a live Gmail account or real KaiOS device."
+}
