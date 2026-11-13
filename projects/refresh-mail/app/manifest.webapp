@@ -1,0 +1,32 @@
+{
+  "name": "Refresh Mail",
+  "description": "Read Gmail inbox directly using an app password",
+  "version": "0.1.0",
+  "type": "privileged",
+  "origin": "app://refresh-mail",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "permissions": {
+    "tcp-socket": {}
+  },
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "ru": {
+      "name": "Refresh Mail",
+      "description": "Чтение почты Gmail через пароль приложения"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self'; object-src 'none'",
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  }
+}
