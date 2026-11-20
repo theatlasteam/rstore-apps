@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-clock",
+  "upstreamLicense": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/projects/_shared/LICENSE",
+  "sha256": "41811ca32b872be506f656d33e89a837abfdb2fc017b037b298638fa6b38b3b7",
+  "packageBytes": 1067216,
+  "licenseNotes": "MIT for app code; shared KaiOS Refresh runtime and bundled fonts retain their licences."
+}

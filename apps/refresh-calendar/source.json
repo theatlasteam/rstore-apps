@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-calendar",
+  "upstreamLicense": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/projects/_shared/LICENSE",
+  "sha256": "2d15da58261d766e05cff65fde815b67d66a481a40857a659cb656cd669d0786",
+  "packageBytes": 1066524,
+  "licenseNotes": "MIT for app code; shared KaiOS Refresh runtime and bundled fonts retain their licences."
+}

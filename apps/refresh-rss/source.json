@@ -1,0 +1,7 @@
+{
+  "upstream": "https://github.com/theatlasteam/rstore-apps/tree/main/projects/refresh-rss",
+  "upstreamLicense": "https://raw.githubusercontent.com/theatlasteam/rstore-apps/main/projects/_shared/LICENSE",
+  "sha256": "7c4cdf3cfdf681a3a39372a7313e9f7987c2c15bebe7a912267d1411c941ce34",
+  "packageBytes": 1066762,
+  "licenseNotes": "MIT for app code; shared KaiOS Refresh runtime and bundled fonts retain their licences."
+}

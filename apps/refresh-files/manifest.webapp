@@ -1,0 +1,34 @@
+{
+  "name": "Refresh Files",
+  "description": "Browse SD card and internal storage files, preview text and check disk usage",
+  "version": "0.1.0",
+  "type": "privileged",
+  "origin": "app://refresh-files",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "permissions": {
+    "device-storage:sdcard": {
+      "access": "readwrite"
+    }
+  },
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "ru": {
+      "name": "Refresh Файлы",
+      "description": "Файловый менеджер SD-карты с просмотром текста и анализом памяти"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self'; object-src 'none'",
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  }
+}

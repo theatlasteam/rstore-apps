@@ -1,0 +1,30 @@
+{
+  "name": "Refresh 2048",
+  "description": "Classic 2048 sliding tile puzzle with D-pad controls, undo and high score",
+  "version": "0.1.0",
+  "type": "privileged",
+  "origin": "app://refresh-2048",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "permissions": {},
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "ru": {
+      "name": "Refresh 2048",
+      "description": "Классическая головоломка 2048 с управлением крестовиной, отменой хода и рекордом"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self'; object-src 'none'",
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  }
+}

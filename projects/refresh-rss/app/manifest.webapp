@@ -1,0 +1,32 @@
+{
+  "name": "Refresh RSS",
+  "description": "Fast RSS and Atom news reader with offline cache and custom feeds",
+  "version": "0.1.0",
+  "type": "privileged",
+  "origin": "app://refresh-rss",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "permissions": {
+    "systemXHR": {}
+  },
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "ru": {
+      "name": "Refresh RSS",
+      "description": "Лёгкий RSS/Atom ридер новостей с офлайн-кэшем и своими лентами"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self'; connect-src *; object-src 'none'",
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  }
+}

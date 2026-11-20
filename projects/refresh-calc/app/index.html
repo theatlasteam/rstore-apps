@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Refresh Calc</title>
+  <link rel="stylesheet" href="app://theme.gaiamobile.org/shared/elements/gaia-theme/gaia-theme.css">
+  <link rel="stylesheet" href="refresh-ui.css">
+  <style>
+    .calc-disp{background:var(--kr-surface,#121821);border:1px solid var(--kr-border,#222d3c);border-radius:10px;padding:8px 10px;margin-bottom:6px;text-align:right;font-family:'KR JetBrains Mono',monospace}
+    .calc-expr{font-size:15px;min-height:22px;word-break:break-all;color:var(--kr-dim,#9aa8bb)}
+    .calc-res{font-size:24px;font-weight:700;min-height:30px;color:var(--kr-text,#e8eef8)}
+    .pad{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+    .kbtn{border:1px solid var(--kr-border,#222d3c);background:var(--kr-surface,#121821);color:var(--kr-text,#e8eef8);border-radius:8px;padding:7px 2px;font-size:13px;font-weight:600;text-align:center}
+    .kbtn:focus{background:var(--kr-accent,#8ab4ff);color:var(--kr-focus,#17202c)}
+  </style>
+  <script defer src="refresh-ui.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="kaios-refresh-v2/runtime.js"></script>
+</head>
+<body class="theme-service refresh">
+  <header><h1 id="title">Refresh Calc</h1><span id="badge" class="badge" hidden></span></header>
+  <main id="main" tabindex="-1"></main>
+  <div id="notice" role="status" hidden></div>
+  <footer><button id="left"></button><button id="center"></button><button id="right"></button></footer>
+</body>
+</html>

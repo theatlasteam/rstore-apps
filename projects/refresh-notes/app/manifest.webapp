@@ -1,0 +1,30 @@
+{
+  "name": "Refresh Notes",
+  "description": "Fast offline notes with pinning, search, tags and character counter",
+  "version": "0.1.0",
+  "type": "privileged",
+  "origin": "app://refresh-notes",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Atlas Messenger",
+    "url": "https://github.com/theatlasteam/rstore-apps"
+  },
+  "permissions": {},
+  "orientation": "portrait",
+  "chrome": {
+    "statusbar": "overlap"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "ru": {
+      "name": "Refresh Заметки",
+      "description": "Быстрые офлайн-заметки с закреплением, поиском и тегами"
+    }
+  },
+  "csp": "default-src 'self'; script-src 'self'; style-src 'self' app://theme.gaiamobile.org; img-src 'self'; object-src 'none'",
+  "icons": {
+    "56": "/icons/icon-56.png",
+    "112": "/icons/icon-112.png",
+    "128": "/icons/icon-128.png"
+  }
+}

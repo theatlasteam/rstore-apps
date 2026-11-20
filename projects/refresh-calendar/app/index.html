@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Refresh Calendar</title>
+  <link rel="stylesheet" href="app://theme.gaiamobile.org/shared/elements/gaia-theme/gaia-theme.css">
+  <link rel="stylesheet" href="refresh-ui.css">
+  <style>
+    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:8px}
+    .cal-dow{text-align:center;font-size:10px;color:var(--kr-dim,#9aa8bb);padding:2px 0;font-weight:700}
+    .cal-day{border:1px solid var(--kr-border,#222d3c);background:var(--kr-surface,#121821);color:var(--kr-text,#e8eef8);border-radius:6px;padding:4px 0;font-size:12px;text-align:center;position:relative}
+    .cal-day.today{border-color:var(--kr-accent,#8ab4ff);font-weight:700}
+    .cal-day.selected,.cal-day:focus{background:var(--kr-accent,#8ab4ff);color:var(--kr-focus,#17202c)}
+    .cal-day.has-ev::after{content:'';position:absolute;bottom:2px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:currentColor}
+  </style>
+  <script defer src="refresh-ui.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="kaios-refresh-v2/runtime.js"></script>
+</head>
+<body class="theme-service refresh">
+  <header><h1 id="title">Refresh Calendar</h1><span id="badge" class="badge" hidden></span></header>
+  <main id="main" tabindex="-1"></main>
+  <div id="notice" role="status" hidden></div>
+  <footer><button id="left"></button><button id="center"></button><button id="right"></button></footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Refresh 2048</title>
+  <link rel="stylesheet" href="app://theme.gaiamobile.org/shared/elements/gaia-theme/gaia-theme.css">
+  <link rel="stylesheet" href="refresh-ui.css">
+  <style>
+    .board{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;background:var(--kr-surface,#121821);border:1px solid var(--kr-border,#222d3c);border-radius:10px;padding:6px;margin-top:6px}
+    .tile{height:48px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;background:var(--kr-bg,#080b10);color:var(--kr-dim,#9aa8bb);border:1px solid var(--kr-border,#222d3c)}
+    .tile.nz{background:var(--kr-accent,#8ab4ff);color:var(--kr-focus,#17202c);border-color:var(--kr-accent,#8ab4ff)}
+    .tile.hi{filter:brightness(1.12)}
+  </style>
+  <script defer src="refresh-ui.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="kaios-refresh-v2/runtime.js"></script>
+</head>
+<body class="theme-service refresh">
+  <header><h1 id="title">Refresh 2048</h1><span id="badge" class="badge" hidden></span></header>
+  <main id="main" tabindex="-1"></main>
+  <div id="notice" role="status" hidden></div>
+  <footer><button id="left"></button><button id="center"></button><button id="right"></button></footer>
+</body>
+</html>
